@@ -1,11 +1,5 @@
 # challenge code IBTI
 
-Date 04/09/2026
-
-Begin: 15:55
-
-End: 17:55
-
 ## ✅ Assumptions & Priorities
 
 ### 🔹 Priority order

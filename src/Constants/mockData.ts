@@ -1,22 +1,14 @@
-/**
- * Challenge payloads: intentionally inconsistent contracts (legacy fields, mixed shapes).
- * You are not required to handle every fixture in code—prioritize, document assumptions.
- *
- * TODO(product): list items may soon include { text, deprecatedLabel } alongside plain strings;
- * contract still being finalized—treat as an ambiguity in your write-up.
- */
+import type { Data } from "../Types/Data/Data";
 
-export const data = {
+export const data:Data = {
   title: "Payment Analysis",
   sections: [
     { type: "text", content: "Standard summary paragraph." },
-    // Legacy API: same conceptual type, different key ("body" vs "content")
     {
       type: "text",
       body: "Legacy ingest still sends `body` instead of `content`.",
     },
     { type: "list", items: ["Bullet A", "Bullet B"] },
-    // Heterogeneous items: string OR structured object (your typing + rendering decision)
     {
       type: "list",
       items: [
@@ -45,6 +37,7 @@ export const data = {
     { type: "list", items: null },
     // Missing `type`: contract gap
     { content: "Section object without type field." },
+    {type: "metric", label:"metric label", value:100}
   ],
 };
 
